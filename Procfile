@@ -1,1 +1,1 @@
-web: gunicorn proyectoAgiles.wsgi --log-file -
+web: gunicorn proyectoAgiles.wsgi
