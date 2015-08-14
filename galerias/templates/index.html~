@@ -92,6 +92,11 @@
 
             <div class="boton">
                 <input type="submit" value="Guardar"/>
+                {% if msj != '' %}
+                <div id="dialog1" title="Alerta" style="text-align: left">
+                    <p style="color:red;font-weight: bold;text-align:center">{{ msj }}</p>
+                </div>
+                {%endif%}
             </div>
         </form>
     </div>
