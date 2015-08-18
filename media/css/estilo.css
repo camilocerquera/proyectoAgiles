@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#header {
+	background-color: #D8D8D8;
+	border-spacing: 5px;
+	padding: 1px;
+	border-bottom:1px solid #eee;
+	text-align:center;
+}
+
+#header h1{
+	font-family: Segoe UI,Arial,sans-serif;
+	font-weight: bold;
+	color: #4c3000;
+	font-size:2.5em;
+}
+
+#galeria {
+	overflow:hidden;
+	margin:15px 17px 20px 130px;
+	display: block;
+}
+
+#itemGaleria {
+	float:left;
+	position:relative;
+	display:none;
+	margin:25px;
+	border:1px solid #eee;
+	box-sizing:content-box;
+	overflow:hidden;
+	display: block;
+}
+
+#footer {
+	background-color: #D8D8D8;
+	border-bottom:1px solid #eee;
+	font-family: Segoe UI,Arial,sans-serif;
+	font-weight: bold;
+	color: #4c3000;
+	text-align:center;
+	padding: 0.2px;
+	position: relative; 
+	margin-top: 15px; /* altura en px del footer con valor negativo */
+ 	height: 50px; /* Altura del Footer en px*/ 
+	clear: both;
+}
+
+#addCenter {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+#about{
+	font-family: Segoe UI,Arial,sans-serif;
+	font-weight: bold;
+	color: #4c3000;
+	font-size:2em;
+	margin-left:100px;
+	position: relative; 
+}
+
+#contactTable{
+	font-family: Segoe UI,Arial,sans-serif;
+	color: #4c3000;
+}
+
+#addTable{
+	font-family: Segoe UI,Arial,sans-serif;
+	color: #4c3000;
+	font-size:14;
+}
+
+#detail{
+	max-width: 270px; 
+	font-size:13;
+	text-align:center;
+	font-family: Segoe UI,Arial,sans-serif;
+	color: #4c3000;
+}
+
+#aboutText{
+	font-family: Segoe UI,Arial,sans-serif;
+	color: #4c3000;

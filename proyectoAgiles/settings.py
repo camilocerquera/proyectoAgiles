@@ -121,5 +121,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-MEDIA_ROOT ='../media/'
+MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/site_media/'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'procesosagiles2015@gmail.com'
+EMAIL_HOST_PASSWORD = 'uniandes123456'
+EMAIL_PORT = 587

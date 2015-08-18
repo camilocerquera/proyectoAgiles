@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<link type="text/css" href="/site_media/css/custom-theme/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+<link type="text/css" href="/site_media/css/estilo.css" rel="stylesheet" />
+<script type="text/javascript" src="/site_media/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/site_media/js/jquery-ui-1.10.4.custom.js"></script>
+
+
+
+<script type="text/javascript">
+	$(function() {
+		$("#accordion").accordion();
+	});
+	$(function() {
+		$("input[type=submit],a").button()
+	});
+	$(function() {
+	    $( "#radio" ).buttonset();
+	});
+</script>
+<title>Galeria de Fotos</title>
+</head>
+
+
+<body>
+
+	<div id="header">
+		<h1>Galeria de Imágenes</h1>
+		<form>
+		  <div id="radio" style="text-align:center">
+		    <input type="radio" id="homeButton"><label for="homeButton" onClick="location.href='/'"> Home </label>
+		    <input type="radio" id="addButton" checked="checked" onClick="location.href='/add'"><label for="addButton"> Adicionar Imagen </label>
+		    <input type="radio" id="aboutButton" onClick="location.href='/about'"><label for="aboutButton"> Acerca de.. </label>
+		    <input type="radio" id="contactButton" onClick="location.href='/contact'"><label for="contactButton"> Contáctenos </label>
+		  </div>
+		</form>
+	</div>
+
+<div class="ui-widget" id="addCenter">
+	<div class="ui-state-highlight ui-corner-all" style="margin-top: 10px; padding: 0 .7em;">
+
+		<form ACTION="/add/" METHOD="POST">{% csrf_token %}
+		    	<table id="addTable" border=0 cellpadding="3px" cellspacing="2px">
+				<tr>
+					<td><b>{{form.url.label}}</b></td>
+					<td>{{form.url}} 
+						<span class="ui-icon ui-icon-info" style="float: right;"></span>
+					</td>
+				</tr>
+				<br>
+				<tr>
+					<td><b>Titulo</b></td>
+					<td>{{form.title}} 
+						<span class="ui-icon ui-icon-info" style="float: right;"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td><b>Descripción</b></td>
+					<td>{{form.description}}
+						<span class="ui-icon ui-icon-info" style="float: right;"></span>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<div class="boton" style="text-align:center">
+				<input type="submit" value="Guardar" />
+			</div>
+			{% if msj != '' %}
+			<div class="ui-widget" style="padding:8px">
+				<div class="ui-state-error ui-corner-all" style="padding: 0 .2em;">
+					<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+						<strong>Alerta </strong>{{msj}}	
+				</div>
+			</div>
+			{%endif%}
+		</form>
+	</div>
+</div>
+
+
+
+<div id="footer"><h4>Grupo 1: Adriana Marcela Osorio F. -
+		Efrain César Perez - Juan Camilo Cerquera - Andres Felipe Osorio -
+		Jamil Murcia</h4>
+</div>
+</body>
+
+</html>

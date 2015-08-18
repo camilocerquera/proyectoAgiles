@@ -19,6 +19,9 @@ from proyectoAgiles import settings
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^galerias/', include('galerias.urls')),
+    url(r'^', include('galerias.urls')),
+    url(r'^add/', include('galerias.urls')),
+    url(r'^about/', include('galerias.urls')),
+    url(r'^contact/', include('galerias.urls')),  
     url(r'^site_media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
 ]

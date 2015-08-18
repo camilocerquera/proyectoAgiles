@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link type="text/css" href="/site_media/css/custom-theme/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+<link type="text/css" href="/site_media/css/estilo.css" rel="stylesheet" />
+<script type="text/javascript" src="/site_media/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/site_media/js/jquery-ui-1.10.4.custom.js"></script>
+
+
+
+<script type="text/javascript">
+	$(function() {
+		$("#accordion").accordion();
+	});
+	$(function() {
+		$("input[type=submit],a").button()
+	});
+	  
+	$(function() {
+	    $( "#radio" ).buttonset();
+	});
+</script>
+<title>Galeria de Fotos</title>
+</head>
+
+
+<body>
+
+	<div id="header">
+		<h1>Galeria de Imágenes</h1>
+		<form>
+		  <div id="radio" style="text-align:center">
+		    <input type="radio" id="homeButton"><label for="homeButton" onClick="location.href='/'"> Home </label>
+		    <input type="radio" id="addButton" onClick="location.href='/add'"><label for="addButton"> Adicionar Imagen </label>
+		    <input type="radio" id="aboutButton" checked="checked" onClick="location.href='/about'"><label for="aboutButton"> Acerca de.. </label>
+		    <input type="radio" id="contactButton" onClick="location.href='/contact'"><label for="contactButton"> Contáctenos </label>
+		  </div>
+		</form>
+	</div>
+	
+	<img src="/site_media/otros/django.jpg" ALT="Galeria de fotos" style="height: 400px;float:left; margin:10px;">
+	
+	<p id="about">Acerca de esta Galería</p>
+	
+	<div id="aboutText">
+	Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+	</div>
+
+
+
+
+<div id="footer"><h4>Grupo 1: Adriana Marcela Osorio F. -
+		Efrain César Perez - Juan Camilo Cerquera - Andres Felipe Osorio -
+		Jamil Murcia</h4>
+</div>
+</body>
+
+</html>

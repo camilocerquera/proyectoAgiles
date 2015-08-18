@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link type="text/css" href="/site_media/css/custom-theme/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+<link type="text/css" href="/site_media/css/estilo.css" rel="stylesheet" />
+<script type="text/javascript" src="/site_media/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/site_media/js/jquery-ui-1.10.4.custom.js"></script>
+
+
+
+<script type="text/javascript">
+	$(function() {
+		$("#accordion").accordion();
+	});
+	$(function() {
+		$("input[type=submit],a").button()
+	});
+	  
+	$(function() {
+	    $( "#radio" ).buttonset();
+	});
+</script>
+<title>Galeria de Fotos</title>
+</head>
+
+
+<body>
+
+	<div id="header">
+		<h1>Galeria de Imágenes</h1>
+		<form>
+		  <div id="radio" style="text-align:center">
+		    <input type="radio" id="homeButton"><label for="homeButton" onClick="location.href='/'"> Home </label>
+		    <input type="radio" id="addButton" onClick="location.href='/add'"><label for="addButton"> Adicionar Imagen </label>
+		    <input type="radio" id="aboutButton" onClick="location.href='/about'"><label for="aboutButton"> Acerca de.. </label>
+		    <input type="radio" id="contactButton" checked="checked" onClick="location.href='/contact'"><label for="contactButton"> Contáctenos </label>
+		  </div>
+		</form>
+	</div>
+
+<table>
+	<tr>
+	<td>
+	<img src="/site_media/otros/contactenos.png" ALT="Galeria de fotos" style="width: 450px;float:left; margin:10px">
+	</td>
+	<td>
+	<p id="about">contactenos</p>
+	<form ACTION="/contact/" METHOD="POST">{% csrf_token %}
+		<table id="contactTable">
+			<tr>
+				<td><b>Email</b></td>
+				<td>info@galeriaPython.com</td>
+			</tr>
+			<tr>
+				<td><b>Teléfono</b></td>
+				<td>57 1 88888888</td>
+			</tr>
+			<tr>
+				<td><b>Nombre</b></td>
+				<td>{{form.name}}</td>
+			</tr>
+			<tr>
+				<td><b>Correo</b></td>
+				<td>{{form.email}}</td>
+			</tr>
+			<tr>
+				<td><b>Mensaje</b></td>
+				<td>{{form.msg}}</td>
+			</tr>
+		</table>
+		<br>
+		<div class="boton">
+			<input type="submit" value="Enviar" />
+		</div>
+		{% if msj != '' %}
+		<div class="ui-widget" style="padding:8px">
+			<div class="ui-state-error ui-corner-all" style="padding: 0 .2em;width:100%;float: center">
+				<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+					<strong>Alerta </strong>{{msj}}	
+			</div>
+		</div>
+		{%endif%}
+	</form>
+	</td>
+	</tr>
+</table>
+
+<div id="footer"><h4>Grupo 1: Adriana Marcela Osorio F. -
+		Efrain César Perez - Juan Camilo Cerquera - Andres Felipe Osorio -
+		Jamil Murcia</h4>
+</div>
+</body>
+
+</html>
